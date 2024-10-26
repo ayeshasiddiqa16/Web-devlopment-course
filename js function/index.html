@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myfunction(5)">Execute JS FUNCTION</button>
+    <script>
+        function myfunction(x, y)
+        {
+            if (y === undefined ) {
+                y = 2;
+            }
+            document.write(x*y);
+        }
+    </script>
+    <p>A function can access variables defined inside the function:</p>
+    <button type="button" onclick="myFunction()">CLICK ME</button>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        var b = 5;
+        function myFunction() {
+            var a = 4;
+            document.getElementById("demo4").innerHTML = b * a;
+        }
+        document.getElementById("demo5").innerHTML = a;
+        document.getElementById("demo5").innerHTML = b;
+    </script>
+    <p>Setting a default value to a function parameter.</p>
+    <p id="demo3"></p>
+    <script>
+        function myFunction(x, y) {
+            if (y=== undefined) {
+                y = 2;
+            }
+            return x * y ;
+        }
+            document.getElementById("demo3").innerHTML = myFunction(5);
+       
+    </script>
+</body>
+</html>
